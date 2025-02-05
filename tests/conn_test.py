@@ -16,12 +16,14 @@ def get_db_connection():
         database="books",
     )
 
-print(get_db_connection())
 
 mydb = get_db_connection()
 mycursor = mydb.cursor()
 
-mycursor.execute("SHOW DATABASES")
+sql = "INSERT INTO books (isbn13, isbn10, title, author) VALUES (%s, %s, %s, %s)"
+val = ("test", "test", "test", "test")
+mycursor.execute(sql, val)
 
-for x in mycursor:
-    print(x)
+mydb.commit()
+
+print(mycursor.rowcount, "record inserted.")
