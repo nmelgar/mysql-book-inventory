@@ -8,5 +8,5 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 # mydb = db_conn.get_db_connection()
 # mycursor = mydb.cursor()
 
-def delete_book():
-    print("delete book")
+def exit_app():
+    print("exit app")

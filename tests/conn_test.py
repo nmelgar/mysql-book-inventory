@@ -20,10 +20,24 @@ def get_db_connection():
 mydb = get_db_connection()
 mycursor = mydb.cursor()
 
-sql = "INSERT INTO books (isbn13, isbn10, title, author) VALUES (%s, %s, %s, %s)"
-val = ("test", "test", "test", "test")
-mycursor.execute(sql, val)
+# sql = "INSERT INTO books (isbn13, isbn10, title, author) VALUES (%s, %s, %s, %s)"
+# val = ("test", "test", "test", "test")
+# mycursor.execute(sql, val)
 
-mydb.commit()
+# mydb.commit()
 
-print(mycursor.rowcount, "record inserted.")
+# print(mycursor.rowcount, "record inserted.")
+
+books_columns = [
+    "isbn13",
+    "isbn10",
+    "subtitle",
+    "author",
+    "category",
+    "thumbnail",
+    "description",
+    "published_year",
+    "average_rating",
+    "num_pages",
+    "ratings_count",
+]

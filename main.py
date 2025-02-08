@@ -1,25 +1,20 @@
 import db.db_conn as db_conn
 import menu.menu as menu
-
-
-def action_input():
-    """Based on user's choice determine what to do"""
-    user_input = input("What would you like to do? (Choose a number) ")
-    return user_input
+import menu.action_input as action_input
+import services.take_action as take_action
 
 
 def main():
     """The main entry point of the program."""
-    # connection to db
-    dbcursor = db_conn.booksdb.cursor()
-
     # print welcome message
     print(
         "\n\n|---------------------------------------------|\n|--- Welcome to the book management system ---|\n|---------------------------------------------|\n"
     )
     # display main menu
     menu.show_menu()
-    action_input()
+    # users input for actions
+    action_number = action_input.action_input()
+    take_action.take_action(action_number)
 
 
 if __name__ == "__main__":
