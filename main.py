@@ -10,11 +10,15 @@ def main():
     print(
         "\n\n|---------------------------------------------|\n|--- Welcome to the book management system ---|\n|---------------------------------------------|\n"
     )
-    # display main menu
-    menu.show_menu()
-    # users input for actions
-    action_number = action_input.action_input()
-    take_action.take_action(action_number)
+    run = True
+    while run:
+        # display main menu
+        menu.show_menu()
+        # users input for actions
+        action_number = action_input.action_input()
+        # take_action.take_action(action_number)
+        # stop the program when user chooses 5
+        run = take_action.take_action(action_number)
 
 
 if __name__ == "__main__":

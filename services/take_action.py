@@ -1,7 +1,6 @@
 import services.add_book as add_book
 import services.edit_book as edit_book
 import services.delete_book as delete_book
-import services.exit_app as exit_app
 import menu.action_input as action_input
 
 
@@ -14,4 +13,6 @@ def take_action(action_input):
     elif action_input == 3:
         delete_book.delete_book()
     elif action_input == 5:
-        exit_app.exit_app()
+        return False
+
+    return True
