@@ -4,7 +4,7 @@ This project is a Book Management System developed to enhance my skills as a sof
 
 The purpose of this software is to provide a practical application of database management and Python programming, demonstrating how to interact with a relational database through a Python application.
 
-Software Demo Video: [This is an external link to the video](https://www.youtube.com/)
+Software Demo Video: [This is an external link to the video](https://youtu.be/__Go6l9qPzU)
 
 # Relational Database
 
