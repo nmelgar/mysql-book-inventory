@@ -31,6 +31,7 @@ mycursor = mydb.cursor()
 books_columns = [
     "isbn13",
     "isbn10",
+    "title",
     "subtitle",
     "author",
     "category",

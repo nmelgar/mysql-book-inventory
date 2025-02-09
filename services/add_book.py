@@ -29,4 +29,4 @@ def add_book():
 
     booksdb.commit()
 
-    print(dbcursor.rowcount, "\nBook succesfully.")
+    print(dbcursor.rowcount, "\nBook added succesfully.")
